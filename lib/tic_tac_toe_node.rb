@@ -11,6 +11,12 @@ class TicTacToeNode
     # board.over? 
     # winner == opponent (LOSING NODE)
     # winner == nil || player (NOT LOSING NODE)
+
+    loser = true
+    if @board.over?
+      @board.winner == @next_mover_mark ? true : false
+  
+    end
   end
 
   def winning_node?(evaluator)
